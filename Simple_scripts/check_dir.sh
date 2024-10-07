@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "Please enter the full directory path you search for:"
 read path
 echo "Searching ..... "

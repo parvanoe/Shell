@@ -5,9 +5,9 @@ status=$(aws eks describe-cluster --name <cluster> --region <region> --query "cl
 
 # Loop until the status is no longer "UPDATING"
 while [[ "$status" == "UPDATING" ]]; do
-    echo "Nodegroup is still updating..."
+    echo "Control plane is still updating..."
     sleep 5
     status=$(aws eks describe-cluster --name <cluster> --region <region> --query "cluster.status" --output text)
 done
 
-echo "Nodegroup update completed with status: $status"
+echo "Control plane update completed with status: $status"
